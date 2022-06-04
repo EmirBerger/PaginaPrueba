@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(161, 140, 209, 0.507) 0%, rgba(251, 194, 235, 0.511) 100%), url(../imagenes/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.menu{
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    transform: translate(0);
+    box-shadow: 0 0 6px rgb(0, 0, 0, .5);
+}
+
+.menu2{
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    transform: translate(200%); 
+    box-shadow: 0 0 6px rgb(0, 0, 0, .5);
+}
+.menu2-abierto{
+    transform: translate(0);
+}
+
+.navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.menu-salida{
+    transform: translate(0);
+}
+
+.navegacion a{
+    color: white;
+    text-decoration: none;
+}
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color:rgb(171, 98, 202);
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-servicio img{
+    width: 40%;
+}
+
+.lista-servicio{
+    width: 45%;
+}
+
+.service{
+    margin-bottom: 20px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: rgb(171, 98, 202);
+}
+
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.gallery{
+    background: rgb(239, 239, 239);
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+.close{
+    position: fixed;
+    top: 40px;
+    right: 250px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.close:hover{
+    border: 1px solid #667eea;
+    border-radius: 50%;
+}
+
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-expertos{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-experts img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.n-expert{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer{
+    background: rgb(171, 98, 202);
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0 40px 0;
+}
+
+.contacto{
+    width: 40%;
+    color: white;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+.contacto p{
+    font-weight: 500;
+}
+
+.redes{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iconos{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.iconos:hover{
+    background: white;
+}
+
+.iconos img{
+    font-size: 30px;
+    line-height: 60px;
+    width: 55px;
+    height: 55px;
+    margin-top: 1px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: white;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 800px){
+    .navegacion{
+        width: 40vw;
+    }
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor-servicio img{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .lista-servicio{
+        width: 80%;
+    }
+    .service{
+        margin-bottom: 40px;
+    }
+    .img-galeria{
+        width: 45%;
+    }
+    .agregar-imagen{
+        width: 80%;
+    }
+    .cont-experts{
+        width: 80%;
+    }
+    .footer-content{
+        justify-content: center;
+    }
+    .contacto{
+        width: 80%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .redes{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .iconos img{
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .navegacion{
+        width: 50vw;
+    }
+    .menu{
+        top: 20px;
+        right: 20px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .subtitulo{
+        font-size: 30px;
+    }
+    .img-galeria{
+        width: 80%;
+    }
+    .agregar-imagen{
+        width: 95%;
+    }
+    .redes{
+        width: 100%;
+    }
+    .contacto{
+        width: 90%;
+    }
+}
